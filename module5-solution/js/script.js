@@ -115,7 +115,7 @@ function buildAndShowHomeHTML (categories) {
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
       var homeHtmlToInsertIntoMainPage = 
-        insertProperty(homeHtml, "randomCategoryShortName", "'" + chosenCategoryShortName + "'");
+        insertProperty(homeHtml, "randomCategoryShortName", "'" + chosenCategoryShortName.short_name + "'");
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
@@ -133,7 +133,7 @@ function chooseRandomCategory (categories) {
   var randomArrayIndex = Math.floor(Math.random() * categories.length);
   
   // return category object with that randomArrayIndex
-  return categories[randomArrayIndex].short_name;
+  return categories[randomArrayIndex];
 }
 
 // Load the menu categories view
